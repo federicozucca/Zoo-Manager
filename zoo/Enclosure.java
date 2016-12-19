@@ -11,7 +11,7 @@ public class Enclosure {
     private String type;
     private ArrayList<MysthicalAnimal> animals;
 
-    public Enclosure(String type){
+    public Enclosure(String type, ArrayList<MysthicalAnimal>){
         this.type = type;
         this.animals = new ArrayList<MysthicalAnimal>();
     }
@@ -24,5 +24,8 @@ public class Enclosure {
         return animals.size();
     }
 
-
+    public String getType(){
+        return this.type;
+    }
 }
+

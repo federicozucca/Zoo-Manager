@@ -1,4 +1,4 @@
-package zoo;
+import zoo.*;
 
 import org.junit.Test;
 

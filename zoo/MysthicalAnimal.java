@@ -17,7 +17,6 @@ public abstract class MysthicalAnimal {
         this.name = name;
         this.age = age;
         this.energyLevel = "I am full of energy!";
-
     }
 
     public String getName(){
@@ -63,5 +62,5 @@ public abstract class MysthicalAnimal {
         return null;
     }
 
-
-    }
+    
+} 

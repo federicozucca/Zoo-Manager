@@ -7,7 +7,7 @@ public class Runner {
     String zooName = System.console().readLine();
     Zoo zoo = new Zoo(zooName);
     System.out.println("Welcome to: " + zoo.getName());
-    Player player = new Player();
+    Player player = new Player(zoo);
 
     player.run();
 

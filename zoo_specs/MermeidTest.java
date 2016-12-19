@@ -1,4 +1,4 @@
-package zoo;
+import zoo.*;
 import static org.junit.Assert.*;
 import org.junit.*;
 

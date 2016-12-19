@@ -11,6 +11,7 @@ public class Zoo {
     private String name;
     private ArrayList<Enclosure> enclosures;
 
+
     public Zoo(String name) {
         this.name = name;
         enclosures = new ArrayList<Enclosure>();
@@ -24,7 +25,5 @@ public class Zoo {
     public int enclosuresTotalNumber(){
         return enclosures.size();
     }
-
-
 
 }
