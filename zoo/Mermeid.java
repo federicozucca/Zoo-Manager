@@ -4,7 +4,7 @@ package zoo;
  * Created by user on 16/12/2016.
  */
 
-public class Mermeid extends MysthicalAnimal implements Swimable {
+public class Mermeid extends MysticalAnimal implements Swimable {
 
     public Mermeid(String name, int age){
         super(name,age);
@@ -14,5 +14,7 @@ public class Mermeid extends MysthicalAnimal implements Swimable {
         spendEnergy();
         return "Where is Nemo??";
     }
+
+
 
 }

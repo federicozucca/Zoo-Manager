@@ -1,14 +1,13 @@
 package zoo;
 import java.util.ArrayList;
 
-public class MainPoolEnclosure extends Enclosure{
+public class PoolEnclosure extends Enclosure {
 
 ArrayList<Mermeid> mysticalAnimals;
  
-  public MainPoolEnclosure(String type){
-    super(type);
+  public PoolEnclosure(String name){
+    super(name);
     this.mysticalAnimals = new ArrayList<Mermeid>();
-
   }
 
   public void addAnimal(Mermeid mermeid){
@@ -18,5 +17,11 @@ ArrayList<Mermeid> mysticalAnimals;
   public int getSize(){
       return mysticalAnimals.size();
   }
+
+  public void removeAnimal(Mermeid mermeid){
+      mysticalAnimals.remove(mermeid);
+  }
+
+
 
 }

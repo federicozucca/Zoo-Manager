@@ -5,8 +5,8 @@ public class DragonFenceEnclosure extends Enclosure{
 
 ArrayList<Dragon> animals;
  
-  public DragonFenceEnclosure(String type){
-    super(type);
+  public DragonFenceEnclosure(String name){
+    super(name);
     this.animals = new ArrayList<Dragon>();
 
   }
@@ -17,6 +17,10 @@ ArrayList<Dragon> animals;
 
   public int getSize(){
       return animals.size();
+  }
+
+  public void removeAnimal(Dragon dragon){
+      animals.remove(dragon);
   }
 
 }

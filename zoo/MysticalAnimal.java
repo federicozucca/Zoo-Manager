@@ -5,14 +5,14 @@ import java.util.*;
  * Created by user on 16/12/2016.
  */
 
-public abstract class MysthicalAnimal {
+public abstract class MysticalAnimal {
 
     private String name;
     private int age;
     private ArrayList<Food> belly;
     private String energyLevel;
 
-    public MysthicalAnimal(String name, int age){
+    public MysticalAnimal(String name, int age){
         this.belly = new ArrayList<Food>();
         this.name = name;
         this.age = age;

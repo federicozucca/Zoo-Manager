@@ -5,8 +5,8 @@ public class UnicornFenceEnclosure extends Enclosure{
 
 ArrayList<Unicorn> animals;
  
-  public UnicornFenceEnclosure(String type){
-    super(type);
+  public UnicornFenceEnclosure(String name){
+    super(name);
     this.animals = new ArrayList<Unicorn>();
 
   }
@@ -14,6 +14,11 @@ ArrayList<Unicorn> animals;
   public void addAnimal(Unicorn unicorn){
       animals.add(unicorn);
   }
+
+  public void removeAnimal(Unicorn unicorn){
+      animals.remove(unicorn);
+  }
+
 
   public int getSize(){
       return animals.size();

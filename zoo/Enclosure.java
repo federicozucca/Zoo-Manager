@@ -6,26 +6,18 @@ import java.util.ArrayList;
  * Created by user on 16/12/2016.
  */
 
-public class Enclosure {
+public abstract class Enclosure {
 
-    private String type;
-    private ArrayList<MysthicalAnimal> animals;
+    private String name;
 
-    public Enclosure(String type, ArrayList<MysthicalAnimal>){
-        this.type = type;
-        this.animals = new ArrayList<MysthicalAnimal>();
+    public Enclosure(String name){
+        this.name = name;
     }
 
-    public void addAnimal(MysthicalAnimal mysthicalAnimal){
-        animals.add(mysthicalAnimal);
+    public String getName(){
+        return this.name;
     }
 
-    public int getSize(){
-        return animals.size();
-    }
 
-    public String getType(){
-        return this.type;
-    }
 }
 

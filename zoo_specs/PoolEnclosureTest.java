@@ -11,7 +11,7 @@ public class PoolEnclosureTest {
 
     @Before
     public void before(){
-        poolEnclosure = new PoolEnclosure("Main Pool");
+        poolEnclosure = new PoolEnclosure("Pool");
     }
 
     @Test
@@ -21,4 +21,12 @@ public class PoolEnclosureTest {
         assertEquals(1,poolEnclosure.getSize());
     }
 
+    @Test
+    public void mermeidCanBeRemovedFromTheUnicornFenceTest(){
+        Mermeid mermeid = new Mermeid("Ariel", 10);
+        poolEnclosure.addAnimal(mermeid);
+        poolEnclosure.addAnimal(mermeid);
+        poolEnclosure.remove(mermeid);
+        assertEquals(1,poolEnclosure.getSize());
+    }
 }

@@ -11,13 +11,22 @@ public class DragonFenceEnclosureTest {
 
     @Before
     public void before(){
-        dragonFenceEnclosure = new DragonFenceEnclosure("Main Pool");
+        dragonFenceEnclosure = new DragonFenceEnclosure("Dragon");
     }
 
     @Test
-    public void mermeidsCanBeEnclosedInThePoolTest(){
+    public void dragonCanBeEnclosedInTheDragonFenceTest(){
         Dragon dragon = new Dragon("Ada", 10);
         dragonFenceEnclosure.addAnimal(dragon);
+        assertEquals(1,dragonFenceEnclosure.getSize());
+    }
+
+
+    @Test
+    public void mermeidCanBeRemovedFromTheUnicornFenceTest(){
+        Dragon dragon = new Dragon("Ada", 10);
+        dragonFenceEnclosure.addAnimal(dragon);
+        dragonFenceEnclosure.remove(mermeid)
         assertEquals(1,dragonFenceEnclosure.getSize());
     }
 
