@@ -55,7 +55,14 @@ public class ZooTest {
     assertEquals(1, zoo.enclosuresTotalNumber());
     }
 
-    
+    @Test
+    public void canRemoveAnEnclosure(){
+    PoolEnclosure poolEnclosure = new PoolEnclosure("Mermeid Pool");
+    zoo.addEnclosureToZoo(poolEnclosure);
+    assertEquals(1, zoo.enclosuresTotalNumber());
+    zoo.removeEnclosureFromZoo(poolEnclosure);
+    assertEquals(0, zoo.enclosuresTotalNumber());
+    }
 
     @Test
     public void canAddAnAnimalToEnclosure(){
