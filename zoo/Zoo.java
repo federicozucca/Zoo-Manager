@@ -90,5 +90,16 @@ public void removeAnimalsFromEnclosures(String name, Mermeid mermeid){
     enclosure.removeAnimal(mermeid);
     }
 
+public void removeAnimalsFromEnclosures(String name, Unicorn unicorn){
+    UnicornFenceEnclosure enclosure = (UnicornFenceEnclosure )getEnclosureName(name);
+    enclosure.removeAnimal(unicorn);
+}
+
+
+public void removeAnimalsFromEnclosures(String name, Dragon dragon){
+    DragonFenceEnclosure enclosure = (DragonFenceEnclosure)getEnclosureName(name);
+    enclosure.removeAnimal(dragon);
+}
+
 
 }
