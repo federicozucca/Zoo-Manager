@@ -57,7 +57,6 @@ public class UnicornTest {
         assertEquals(0, unicorn.foodCount());
     }
 
-
     @Test
     public void canGetEnergy(){
         assertEquals(0,unicorn.foodCount());
