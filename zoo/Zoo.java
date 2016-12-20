@@ -66,6 +66,10 @@ public void addAnimaltoMysticalAnimals(MysticalAnimal animal){
     mysticalAnimals.add(animal);
 }
 
+public void removeAnimalFromMysticalAnimals(MysticalAnimal animal){
+    mysticalAnimals.remove(animal);
+}
+
 public void addAnimalToEnclosures(String name, Mermeid mermeid){
     PoolEnclosure enclosure = (PoolEnclosure)getEnclosureName(name);
     enclosure.addAnimal(mermeid);

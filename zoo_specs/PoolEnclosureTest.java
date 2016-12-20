@@ -22,11 +22,14 @@ public class PoolEnclosureTest {
     }
 
     @Test
-    public void mermeidCanBeRemovedFromTheUnicornFenceTest(){
-        Mermeid mermeid = new Mermeid("Ariel", 10);
-        poolEnclosure.addAnimal(mermeid);
-        poolEnclosure.addAnimal(mermeid);
-        poolEnclosure.removeAnimal(mermeid);
+    public void mermeidCanBeRemovedFromThePoolTest(){
+        Mermeid mermeid1 = new Mermeid("Ariel", 10);
+        Mermeid mermeid2 = new Mermeid("Ada", 10);
+        poolEnclosure.addAnimal(mermeid1);
+        poolEnclosure.addAnimal(mermeid2);
+        poolEnclosure.removeAnimal(mermeid1);
         assertEquals(1,poolEnclosure.getSize());
     }
+
+
 }

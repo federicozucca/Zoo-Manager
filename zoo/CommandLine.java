@@ -57,7 +57,9 @@ public class CommandLine {
     Mermeid mermeid = new Mermeid(mermeidName,mermeidAge);
     zoo.addAnimaltoMysticalAnimals(mermeid);
     zoo.addAnimalToEnclosures("Mermeid Pool", mermeid);
-      index();
+    System.out.println("Mermeid added to: " + zoo.getName());
+
+    index();
   }
   
   public void addUnicorn(){
@@ -69,6 +71,8 @@ public class CommandLine {
     Unicorn unicorn = new Unicorn(unicornName,unicornAge);
     zoo.addAnimaltoMysticalAnimals(unicorn);
     zoo.addAnimalToEnclosures("Unicorn Fence", unicorn);
+    System.out.println("Unicorn added to: " + zoo.getName());
+
     index();
 }
 
@@ -81,6 +85,8 @@ public void addDragon(){
   Dragon dragon = new Dragon(dragonName,dragonAge);
   zoo.addAnimaltoMysticalAnimals(dragon);
   zoo.addAnimalToEnclosures("Dragon Fence", dragon);
+  System.out.println("Dragon added to: " + zoo.getName());
+
   index();
 }
 
@@ -91,22 +97,27 @@ public void addDragon(){
     if ("m".equals(input)) {
       removeMermeid();
     } 
-      else if ("d".equals(input)) {
-      removeDragon();
-    }
-     else if ("u".equals(input)) {
-      removeUnicorn();
-    }
+    //   else if ("d".equals(input)) {
+    //   removeDragon();
+    // }
+    //  else if ("u".equals(input)) {
+    //   removeUnicorn();
+    // }
   }
 
   public void removeMermeid(){
-    System.out.println("In the zoo are present this Memeids: ");
-    // System.out.println(zoo.enclosures.showAnimals());
-    // String mermeidName = System.console().readLine();
-    // System.out.println("Enter " + mermeidName +" age: ");
-// //     // String mermeidAge = System.console().readLine();
-// //     // // Mermeid mermeid = new Mermeid(mermeidName,mermeidAge);
-// //     // System.out.println("Memeid added to " + zoo.getName());
+    System.out.println("Enter Mermeid name: ");
+    String mermeidName = System.console().readLine();
+    System.out.println("Enter " + mermeidName +" age: ");
+    String number = System.console().readLine();
+    int mermeidAge = Integer.parseInt(number);
+    Mermeid mermeid = new Mermeid(mermeidName,mermeidAge);
+    zoo.removeAnimalFromMysticalAnimals(mermeid);
+    zoo.removeAnimalsFromEnclosures("Mermeid Pool", mermeid);
+    System.out.println("Memeid removed from: " + zoo.getName());
+
+    index();
+
   }
 
 

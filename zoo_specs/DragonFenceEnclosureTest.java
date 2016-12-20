@@ -23,10 +23,12 @@ public class DragonFenceEnclosureTest {
 
 
     @Test
-    public void mermeidCanBeRemovedFromTheUnicornFenceTest(){
-        Dragon dragon = new Dragon("Ada", 10);
-        dragonFenceEnclosure.addAnimal(dragon);
-        dragonFenceEnclosure.removeAnimal(dragon);
+    public void dragonCanBeRemovedFromTheDragonFenceTest(){
+        Dragon dragon1 = new Dragon("Ralph", 10);
+        Dragon dragon2 = new Dragon("Ralph", 10);
+        dragonFenceEnclosure.addAnimal(dragon1);
+        dragonFenceEnclosure.addAnimal(dragon2);
+        dragonFenceEnclosure.removeAnimal(dragon1);
         assertEquals(1,dragonFenceEnclosure.getSize());
     }
 

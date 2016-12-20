@@ -20,6 +20,4 @@ public class ZooTest {
     public void zooCanGetAName(){
         assertEquals("Edinburgh Zoo", zoo.getName());
     }
-
-
 }

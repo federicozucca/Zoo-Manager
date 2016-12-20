@@ -3,24 +3,24 @@ import java.util.ArrayList;
 
 public class DragonFenceEnclosure extends Enclosure{
 
-ArrayList<Dragon> animals;
+ArrayList<Dragon> mysticalAnimals;
  
   public DragonFenceEnclosure(String name){
     super(name);
-    this.animals = new ArrayList<Dragon>();
+    this.mysticalAnimals = new ArrayList<Dragon>();
 
   }
 
   public void addAnimal(Dragon dragon){
-      animals.add(dragon);
+      mysticalAnimals.add(dragon);
   }
 
   public int getSize(){
-      return animals.size();
+      return mysticalAnimals.size();
   }
 
   public void removeAnimal(Dragon dragon){
-      animals.remove(dragon);
+      mysticalAnimals.remove(dragon);
   }
 
 }
