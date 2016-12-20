@@ -51,10 +51,6 @@ public class Zoo {
             System.out.println(mysticalAnimal.getName() + " Age: " +mysticalAnimal.getAge() + " Status: " + mysticalAnimal.getEnergy() );
     }
 
-    public void printAllMermeids() {
-        for (MysticalAnimal mysticalAnimal : mysticalAnimals)
-            System.out.println(mysticalAnimal.getName() + " Age: " +mysticalAnimal.getAge() + " Status: " + mysticalAnimal.getEnergy() );
-    }
 
     public Enclosure getEnclosureName(String name){
         for( Enclosure enclosure : enclosures){

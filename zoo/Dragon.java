@@ -13,7 +13,5 @@ public class Dragon extends MysticalAnimal implements Flyable {
     public String fly(){
         spendEnergy();
         return "I do not like to fly in this enclosure, I want to be free!";
-
-
     }
 }
