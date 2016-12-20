@@ -51,6 +51,11 @@ public class Zoo {
             System.out.println(mysticalAnimal.getName() + " Age: " +mysticalAnimal.getAge() + " Status: " + mysticalAnimal.getEnergy() );
     }
 
+    public void printAllMermeids() {
+        for (MysticalAnimal mysticalAnimal : mysticalAnimals)
+            System.out.println(mysticalAnimal.getName() + " Age: " +mysticalAnimal.getAge() + " Status: " + mysticalAnimal.getEnergy() );
+    }
+
     public Enclosure getEnclosureName(String name){
         for( Enclosure enclosure : enclosures){
             if (enclosure.getName() == name){
@@ -70,6 +75,20 @@ public void addAnimalToEnclosures(String name, Mermeid mermeid){
     enclosure.addAnimal(mermeid);
     }
 
+public void addAnimalToEnclosures(String name, Unicorn unicorn){
+    UnicornFenceEnclosure enclosure = (UnicornFenceEnclosure )getEnclosureName(name);
+    enclosure.addAnimal(unicorn);
+}
+
+public void addAnimalToEnclosures(String name, Dragon dragon){
+    DragonFenceEnclosure enclosure = (DragonFenceEnclosure)getEnclosureName(name);
+    enclosure.addAnimal(dragon);
+}
+
+public void removeAnimalsFromEnclosures(String name, Mermeid mermeid){
+    PoolEnclosure enclosure = (PoolEnclosure)getEnclosureName(name);
+    enclosure.removeAnimal(mermeid);
+    }
 
 
 }

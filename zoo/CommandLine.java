@@ -86,17 +86,17 @@ public void addDragon(){
 
 
   public void removeMysticalAnimal() {
-    // System.out.println("Press 'm' to remove a Mermeid, 'd' to remove a Dragon, 'u' to remove an unicorn");
-    // String input = System.console().readLine();
-    // if ("m".equals(input)) {
-    //   removeMermeid();
-    // } 
-      // else if ("d".equals(input)) {
-    //   removeDragon();
-    // }
-     // else if ("u".equals(input)) {
-    //   removeUnicorn();
-    // }
+    System.out.println("Press 'm' to remove a Mermeid, 'd' to remove a Dragon, 'u' to remove an unicorn");
+    String input = System.console().readLine();
+    if ("m".equals(input)) {
+      removeMermeid();
+    } 
+      else if ("d".equals(input)) {
+      removeDragon();
+    }
+     else if ("u".equals(input)) {
+      removeUnicorn();
+    }
   }
 
   public void removeMermeid(){

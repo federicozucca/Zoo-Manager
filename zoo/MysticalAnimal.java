@@ -19,6 +19,7 @@ public abstract class MysticalAnimal {
         this.energyLevel = "I am full of energy!";
     }
 
+
     public String getName(){
         return this.name;
     }
