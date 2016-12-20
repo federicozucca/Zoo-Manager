@@ -34,7 +34,7 @@ public class ZooTest {
     Mermeid mermeid1 = new Mermeid("Ariel",19);
     zoo.addAnimaltoMysticalAnimals(mermeid);
     zoo.addAnimaltoMysticalAnimals(mermeid1);
-    zoo.removeAnimaltoMysticalAnimals(mermeid1);
+    zoo.removeAnimalFromMysticalAnimals(mermeid1);
     assertEquals(1, zoo.animalsTotalNumber());
     }
 
@@ -47,6 +47,15 @@ public class ZooTest {
     // zoo.getEnclosureName("Mermeid Pool");
     // assertEquals(poolEnclosure, zoo.getEnclosureName());
     // }
+
+    @Test
+    public void canAddAnEnclosure(){
+    PoolEnclosure poolEnclosure = new PoolEnclosure("Mermeid Pool");
+    zoo.addEnclosureToZoo(poolEnclosure);
+    assertEquals(1, zoo.enclosuresTotalNumber());
+    }
+
+    
 
     @Test
     public void canAddAnAnimalToEnclosure(){

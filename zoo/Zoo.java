@@ -70,6 +70,10 @@ public void addEnclosureToZoo(Enclosure enclosure){
         enclosures.add(enclosure);
 }
 
+public void removeEnclosureFromZoo(Enclosure enclosure){
+        enclosures.remove(enclosure);
+}
+
 public void addAnimaltoMysticalAnimals(MysticalAnimal animal){
     mysticalAnimals.add(animal);
 }
