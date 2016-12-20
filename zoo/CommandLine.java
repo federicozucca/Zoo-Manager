@@ -60,10 +60,10 @@ public class CommandLine {
     System.out.println("Enter " + mermeidName +" age: ");
     String number = System.console().readLine();
     int mermeidAge = Integer.parseInt(number);
-    Mermeid mermeid = new Mermeid(mermeidName,mermeidAge);
+    Mermeid mermeid = new Mermeid(mermeidName,mermeidAge,"Mermeid");
     zoo.addAnimaltoMysticalAnimals(mermeid);
     zoo.addAnimalToEnclosures("Mermeid Pool", mermeid);
-    System.out.println("Mermeid added to: " + zoo.getName());
+    System.out.println("Mermeid "+ mermeidName + "added to: " + zoo.getName());
 
     index();
   }
@@ -74,10 +74,10 @@ public class CommandLine {
     System.out.println("Enter " + unicornName +" age: ");
     String number = System.console().readLine();
     int unicornAge = Integer.parseInt(number);
-    Unicorn unicorn = new Unicorn(unicornName,unicornAge);
+    Unicorn unicorn = new Unicorn(unicornName,unicornAge,"Unicorn");
     zoo.addAnimaltoMysticalAnimals(unicorn);
     zoo.addAnimalToEnclosures("Unicorn Fence", unicorn);
-    System.out.println("Unicorn added to: " + zoo.getName());
+    System.out.println("Unicorn "+ unicornName + " added to: " + zoo.getName());
 
     index();
 }
@@ -88,10 +88,10 @@ public void addDragon(){
   System.out.println("Enter " + dragonName +" age: ");
   String number = System.console().readLine();
   int dragonAge = Integer.parseInt(number);
-  Dragon dragon = new Dragon(dragonName,dragonAge);
+  Dragon dragon = new Dragon(dragonName,dragonAge,"Dragon");
   zoo.addAnimaltoMysticalAnimals(dragon);
   zoo.addAnimalToEnclosures("Dragon Fence", dragon);
-  System.out.println("Dragon added to: " + zoo.getName());
+  System.out.println("Dragon "+ dragonName + "added to: " + zoo.getName());
 
   index();
 }
