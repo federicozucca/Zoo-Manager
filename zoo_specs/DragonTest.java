@@ -54,7 +54,7 @@ public class DragonTest {
     }
 
     @Test
-    public void canThrowUp(){
+    public void canSpendEnergy(){
         Food food1 = new Food("salmon");
         Food food2 = new Food("mouse");
         dragon.eat(food1);

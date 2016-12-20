@@ -9,8 +9,8 @@ public class CommandLine {
 
   public CommandLine(Zoo zoo) {
     this.zoo = zoo;
-    zoo.populateEnclosures();
-    zoo.populateAnimals();
+    // zoo.populateEnclosures();
+    // zoo.populateAnimals();
   }
 
   public void index(){
@@ -24,7 +24,7 @@ public class CommandLine {
   }
 
     public void showAllEnclosures(){
-    zoo.printAllEnclosures();
+    zoo.getEnclosuresDetails();
     index();
   }
 

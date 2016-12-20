@@ -18,6 +18,8 @@ public abstract class Enclosure {
         return this.name;
     }
 
+    public abstract int getSize();
+
 
 }
 

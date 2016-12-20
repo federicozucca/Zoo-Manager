@@ -3,15 +3,15 @@ import java.util.ArrayList;
 
 public class Lake extends Enclosure {
 
-ArrayList<LochNess> mysticalAnimals;
+ArrayList<Nessie> mysticalAnimals;
  
   public Lake(String name){
     super(name);
-    this.mysticalAnimals = new ArrayList<LochNess>();
+    this.mysticalAnimals = new ArrayList<Nessie>();
   }
 
-  public void addAnimal(LochNess lochness){
-      mysticalAnimals.add(lochness);
+  public void addAnimal(Nessie nessie){
+      mysticalAnimals.add(nessie);
   }
 
   public int getSize(){
@@ -19,8 +19,8 @@ ArrayList<LochNess> mysticalAnimals;
   }
 
 
-  public void removeAnimal(LochNess lochness){
-      mysticalAnimals.remove(lochness);
+  public void removeAnimal(Nessie nessie){
+      mysticalAnimals.remove(nessie);
   }
 
   

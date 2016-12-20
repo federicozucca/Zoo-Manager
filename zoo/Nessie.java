@@ -4,9 +4,9 @@ package zoo;
  * Created by user on 16/12/2016.
  */
 
-public class LochNess extends MysticalAnimal implements Swimable {
+public class Nessie extends MysticalAnimal implements Swimable {
 
-    public LochNess(String name, int age){
+    public Nessie(String name, int age){
         super(name,age);
     }
 

@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class Zoo {
 
     private String name;
-    private ArrayList<Enclosure> enclosures;
-    private ArrayList<MysticalAnimal> mysticalAnimals;
+    public ArrayList<Enclosure> enclosures;
+    public ArrayList<MysticalAnimal> mysticalAnimals;
 
 
     public Zoo(String name) {
@@ -25,7 +25,6 @@ public class Zoo {
 
     public int enclosuresTotalNumber(){
         return enclosures.size();
-
     }
 
     public int animalsTotalNumber(){
@@ -33,22 +32,9 @@ public class Zoo {
 
     }
 
-    public void populateEnclosures(){
-        enclosures.add(new PoolEnclosure("Mermeid Pool"));
-        enclosures.add(new DragonFenceEnclosure("Dragon Fence"));
-        enclosures.add(new UnicornFenceEnclosure("Unicorn Fence"));
-        enclosures.add(new Lake("Lake"));
-    }
-
     public void printAllEnclosures() {
         for (Enclosure enclosure : enclosures)
             System.out.println(enclosure.getName());
-    }
-
-    public void populateAnimals(){
-        mysticalAnimals.add(new Dragon("Camroth Protector Of The Forest",10));
-        mysticalAnimals.add(new Unicorn("Ralph",10));
-        mysticalAnimals.add(new Mermeid("Ariel",1));
     }
 
     public void printAllAnimals() {
@@ -112,6 +98,17 @@ public void removeAnimalsFromEnclosures(String name, Dragon dragon){
     DragonFenceEnclosure enclosure = (DragonFenceEnclosure)getEnclosureName(name);
     enclosure.removeAnimal(dragon);
 }
+
+public void getEnclosuresDetails() {
+    for (Enclosure enclosure : enclosures) {
+        System.out.println("\nEnclosure Name: " + enclosure.getName() + "\nNumber of MysticalAnimal " + enclosure.getSize() + "\n");
+        // for (MysticalAnimal mysticalAnimal : mysticalAnimals) {
+        //   System.out.println("Name: " + mysticalAnimals.getName() + "Food Level: " + mysticalAnimals.getEnergy() );
+        // }
+
+        System.out.println("\n_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
+      }
+    }
 
 
 }
