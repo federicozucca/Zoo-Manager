@@ -57,16 +57,6 @@ public class UnicornTest {
         assertEquals(0, unicorn.foodCount());
     }
 
-    @Test
-    public void canThrowUp(){
-        Food food1 = new Food("salmon");
-        Food food2 = new Food("mouse");
-        unicorn.eat(food1);
-        unicorn.eat(food2);
-        assertEquals(2, unicorn.foodCount());
-        unicorn.spendEnergy();
-        assertEquals(1 ,unicorn.foodCount());
-    }
 
     @Test
     public void canGetEnergy(){
