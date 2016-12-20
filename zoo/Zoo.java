@@ -28,6 +28,11 @@ public class Zoo {
 
     }
 
+    public int animalsTotalNumber(){
+        return mysticalAnimals.size();
+
+    }
+
     public void populateEnclosures(){
         enclosures.add(new PoolEnclosure("Mermeid Pool"));
         enclosures.add(new DragonFenceEnclosure("Dragon Fence"));
@@ -57,10 +62,13 @@ public class Zoo {
             if (enclosure.getName() == name){
                 return enclosure;
             }
-
         }
         return null;
     }
+
+public void addEnclosureToZoo(Enclosure enclosure){
+        enclosures.add(enclosure);
+}
 
 public void addAnimaltoMysticalAnimals(MysticalAnimal animal){
     mysticalAnimals.add(animal);

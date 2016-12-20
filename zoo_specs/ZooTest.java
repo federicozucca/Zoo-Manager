@@ -20,4 +20,42 @@ public class ZooTest {
     public void zooCanGetAName(){
         assertEquals("Edinburgh Zoo", zoo.getName());
     }
+
+    @Test
+    public void canAddAnAnimal(){
+    Mermeid mermeid = new Mermeid("Ariel",19);
+    zoo.addAnimaltoMysticalAnimals(mermeid);
+    assertEquals(1, zoo.animalsTotalNumber());
+    }
+
+    @Test
+    public void canRemoveAnAnimal(){
+    Mermeid mermeid = new Mermeid("Ariel",19);
+    Mermeid mermeid1 = new Mermeid("Ariel",19);
+    zoo.addAnimaltoMysticalAnimals(mermeid);
+    zoo.addAnimaltoMysticalAnimals(mermeid1);
+    zoo.removeAnimaltoMysticalAnimals(mermeid1);
+    assertEquals(1, zoo.animalsTotalNumber());
+    }
+
+    // @Test
+    // public void getEnclosureByName(){
+    // UnicornFenceEnclosure unicornFenceEnclosure = new UnicornFenceEnclosure("unicorn");
+    // zoo.addEnclosureToZoo(unicornFenceEnclosure);
+    // PoolEnclosure poolEnclosure = new PoolEnclosure("Mermeid Pool");
+    // zoo.addEnclosureToZoo(poolEnclosure);
+    // zoo.getEnclosureName("Mermeid Pool");
+    // assertEquals(poolEnclosure, zoo.getEnclosureName());
+    // }
+
+    @Test
+    public void canAddAnAnimalToEnclosure(){
+    PoolEnclosure poolEnclosure = new PoolEnclosure("Mermeid Pool");
+    zoo.addEnclosureToZoo(poolEnclosure);
+    Mermeid mermeid = new Mermeid("Ariel",19);
+    zoo.addAnimaltoMysticalAnimals(mermeid);
+    zoo.addAnimalToEnclosures("Mermeid Pool", mermeid);
+    assertEquals(1, zoo.animalsTotalNumber());
+    assertEquals(1, zoo.enclosuresTotalNumber());
+    }
 }

@@ -15,10 +15,9 @@ public class CommandLine {
 
   public void index(){
     System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-    System.out.println(" What would you like to do? Write 'add' to add an animal, 'rmv' to remove an animal, 'income' to see the zoo's income, 'ShowAnim' to see all the Zoo's Animals, 'ShowEnc' to see all the Zoo's Enclosures");
+    System.out.println(" What would you like to do? Write 'add' to add an animal, 'ShowAnim' to see all the Zoo's Animals, 'ShowEnc' to see all the Zoo's Enclosures");
     String input = System.console().readLine();
     if ("add".equals(input)){addMysticalAnimal();}
-    if ("rmv".equals(input)){removeMysticalAnimal();}
     if ("ShowEnc".equals(input)){showAllEnclosures();}
     if ("ShowAnim".equals(input)){showAllAnimals();}
     System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
@@ -89,38 +88,6 @@ public void addDragon(){
 
   index();
 }
-
-
-  public void removeMysticalAnimal() {
-    System.out.println("Press 'm' to remove a Mermeid, 'd' to remove a Dragon, 'u' to remove an unicorn");
-    String input = System.console().readLine();
-    if ("m".equals(input)) {
-      removeMermeid();
-    } 
-    //   else if ("d".equals(input)) {
-    //   removeDragon();
-    // }
-    //  else if ("u".equals(input)) {
-    //   removeUnicorn();
-    // }
-  }
-
-  public void removeMermeid(){
-    System.out.println("Enter Mermeid name: ");
-    String mermeidName = System.console().readLine();
-    System.out.println("Enter " + mermeidName +" age: ");
-    String number = System.console().readLine();
-    int mermeidAge = Integer.parseInt(number);
-    Mermeid mermeid = new Mermeid(mermeidName,mermeidAge);
-    zoo.removeAnimalFromMysticalAnimals(mermeid);
-    zoo.removeAnimalsFromEnclosures("Mermeid Pool", mermeid);
-    System.out.println("Memeid removed from: " + zoo.getName());
-
-    index();
-
-  }
-
-
 
   public void run(){
     index();
