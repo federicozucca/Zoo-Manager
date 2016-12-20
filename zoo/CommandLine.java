@@ -57,9 +57,7 @@ public class CommandLine {
     Mermeid mermeid = new Mermeid(mermeidName,mermeidAge);
     zoo.addAnimaltoMysticalAnimals(mermeid);
     zoo.addAnimalToEnclosures("Mermeid Pool", mermeid);
-  
-
-    index();
+      index();
   }
   
   public void addUnicorn(){
@@ -69,8 +67,8 @@ public class CommandLine {
     String number = System.console().readLine();
     int unicornAge = Integer.parseInt(number);
     Unicorn unicorn = new Unicorn(unicornName,unicornAge);
-
-
+    zoo.addAnimaltoMysticalAnimals(unicorn);
+    zoo.addAnimalToEnclosures("Unicorn Fence", unicorn);
     index();
 }
 
@@ -81,8 +79,8 @@ public void addDragon(){
   String number = System.console().readLine();
   int dragonAge = Integer.parseInt(number);
   Dragon dragon = new Dragon(dragonName,dragonAge);
-
-
+  zoo.addAnimaltoMysticalAnimals(dragon);
+  zoo.addAnimalToEnclosures("Dragon Fence", dragon);
   index();
 }
 
