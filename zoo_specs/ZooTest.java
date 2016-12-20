@@ -23,15 +23,15 @@ public class ZooTest {
 
     @Test
     public void canAddAnAnimal(){
-    Mermeid mermeid = new Mermeid("Ariel",19);
+    Mermeid mermeid = new Mermeid("Ariel",19"mermeid");
     zoo.addAnimaltoMysticalAnimals(mermeid);
     assertEquals(1, zoo.animalsTotalNumber());
     }
 
     @Test
     public void canRemoveAnAnimal(){
-    Mermeid mermeid = new Mermeid("Ariel",19);
-    Mermeid mermeid1 = new Mermeid("Ariel",19);
+    Mermeid mermeid = new Mermeid("Ariel",19, "mermeid");
+    Mermeid mermeid1 = new Mermeid("Ariel",19, "mermeid");
     zoo.addAnimaltoMysticalAnimals(mermeid);
     zoo.addAnimaltoMysticalAnimals(mermeid1);
     zoo.removeAnimalFromMysticalAnimals(mermeid1);
@@ -79,7 +79,7 @@ public class ZooTest {
     public void canRemoveAnAnimalToEnclosure(){
     PoolEnclosure poolEnclosure = new PoolEnclosure("Mermeid Pool");
     zoo.addEnclosureToZoo(poolEnclosure);
-    Mermeid mermeid = new Mermeid("Ariel",19);
+    Mermeid mermeid = new Mermeid("Ariel",19, "mermeid");
     zoo.addAnimaltoMysticalAnimals(mermeid);
     assertEquals(1, zoo.animalsTotalNumber());
     zoo.removeAnimalFromMysticalAnimals(mermeid);

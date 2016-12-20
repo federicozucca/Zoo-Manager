@@ -11,7 +11,7 @@ public class UnicornTest {
 
     @Before
     public void before(){
-        unicorn = new Unicorn("Visalth Champion Of The Skies", 8);
+        unicorn = new Unicorn("Visalth Champion Of The Skies", 8, "unicorn");
     }
 
     @Test

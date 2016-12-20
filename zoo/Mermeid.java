@@ -6,8 +6,8 @@ package zoo;
 
 public class Mermeid extends MysticalAnimal implements Swimable {
 
-    public Mermeid(String name, int age){
-        super(name,age);
+    public Mermeid(String name, int age, String type){
+        super(name,age,type);
     }
 
     public String swim(){

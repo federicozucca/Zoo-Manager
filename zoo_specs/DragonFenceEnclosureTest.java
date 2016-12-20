@@ -16,7 +16,7 @@ public class DragonFenceEnclosureTest {
 
     @Test
     public void dragonCanBeEnclosedInTheDragonFenceTest(){
-        Dragon dragon = new Dragon("Ada", 10);
+        Dragon dragon = new Dragon("Ada", 10,"dragon");
         dragonFenceEnclosure.addAnimal(dragon);
         assertEquals(1,dragonFenceEnclosure.getSize());
     }
@@ -24,8 +24,8 @@ public class DragonFenceEnclosureTest {
 
     @Test
     public void dragonCanBeRemovedFromTheDragonFenceTest(){
-        Dragon dragon1 = new Dragon("Ralph", 10);
-        Dragon dragon2 = new Dragon("Ralph", 10);
+        Dragon dragon1 = new Dragon("Ralph", 10, "dragon");
+        Dragon dragon2 = new Dragon("Ralph", 10,"dragon");
         dragonFenceEnclosure.addAnimal(dragon1);
         dragonFenceEnclosure.addAnimal(dragon2);
         dragonFenceEnclosure.removeAnimal(dragon1);

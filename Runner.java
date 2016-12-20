@@ -15,16 +15,20 @@ public class Runner {
     zoo.enclosures.add(dragonFenceEnclosure);
     UnicornFenceEnclosure unicornFenceEnclosure = new UnicornFenceEnclosure("Unicorn Fence");
     zoo.enclosures.add(unicornFenceEnclosure);
-    Lake lake = new Lake("Lake");
-    zoo.enclosures.add(lake);
-    Dragon dragon = new Dragon("Camroth Protector Of The Forest", 10);
+
+    Dragon dragon = new Dragon("Camroth Protector Of The Forest", 10, "Dragon");
     zoo.mysticalAnimals.add(dragon);
-    Mermeid mermeid = new Mermeid("Ariel",18);
+    zoo.addAnimalToEnclosures("Dragon Fence", dragon);
+
+    Mermeid mermeid = new Mermeid("Ariel",18, "Mermeid");
     zoo.mysticalAnimals.add(mermeid);
-    Unicorn unicorn = new Unicorn("Ralph",10);
+    zoo.addAnimalToEnclosures("Mermeid Pool", mermeid);
+
+    Unicorn unicorn = new Unicorn("Ralph",10, "Unicorn");
     zoo.mysticalAnimals.add(unicorn);  
-    Nessie nessie = new Nessie("Nessie", 1000);
-    zoo.mysticalAnimals.add(nessie);
+    zoo.addAnimalToEnclosures("Unicorn Fence", unicorn);
+
+
     
 
     commandLine.run();

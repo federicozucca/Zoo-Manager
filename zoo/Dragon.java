@@ -6,8 +6,8 @@ package zoo;
 
 public class Dragon extends MysticalAnimal implements Flyable {
 
-    public Dragon(String name, int age){
-        super(name,age);
+    public Dragon(String name, int age, String type){
+        super(name,age, type);
     }
 
     public String fly(){

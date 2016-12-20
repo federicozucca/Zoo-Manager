@@ -39,7 +39,7 @@ public class Zoo {
 
     public void printAllAnimals() {
         for (MysticalAnimal mysticalAnimal : mysticalAnimals)
-            System.out.println(mysticalAnimal.getName() + "\nAge: " +mysticalAnimal.getAge() + "\nStatus: " + mysticalAnimal.getEnergy() + "\n-_-_-_-_-_-_-_-_-_-_-_-_" );
+            System.out.println(mysticalAnimal.getName() + "\nAge: " +mysticalAnimal.getAge()+ "\nType: " + mysticalAnimal.getType()  + "\nStatus: " + mysticalAnimal.getEnergy() + "\n-_-_-_-_-_-_-_-_-_-_-_-_" );
     }
 
 
@@ -102,12 +102,12 @@ public void removeAnimalsFromEnclosures(String name, Dragon dragon){
 public void getEnclosuresDetails() {
     for (Enclosure enclosure : enclosures) {
         System.out.println("\nEnclosure Name: " + enclosure.getName() + "\nNumber of MysticalAnimal " + enclosure.getSize() + "\n");
-        // for (MysticalAnimal mysticalAnimal : mysticalAnimals) {
-        //   System.out.println("Name: " + mysticalAnimals.getName() + "Food Level: " + mysticalAnimals.getEnergy() );
-        // }
+        for (MysticalAnimal mysticalAnimal : mysticalAnimals) {
+            System.out.println(mysticalAnimal.getName() + "\nAge: " +mysticalAnimal.getAge() + "\nType: " + mysticalAnimal.getType() + "\n---------------------------" );
+              }
+            System.out.println("\n\n\n");
+          }
 
-        System.out.println("\n_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
-      }
     }
 
 

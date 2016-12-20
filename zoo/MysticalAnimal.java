@@ -11,12 +11,14 @@ public abstract class MysticalAnimal {
     private int age;
     private ArrayList<Food> belly;
     private String energyLevel;
+    public String type;
 
-    public MysticalAnimal(String name, int age){
+    public MysticalAnimal(String name, int age, String type){
         this.belly = new ArrayList<Food>();
         this.name = name;
         this.age = age;
         this.energyLevel = "I am full of energy!";
+        this.type = type;
     }
 
 
@@ -26,6 +28,10 @@ public abstract class MysticalAnimal {
 
     public int getAge(){
         return this.age;
+    }
+
+    public String getType(){
+        return this.type;
     }
 
     public int foodCount(){
@@ -63,6 +69,6 @@ public abstract class MysticalAnimal {
         return null;
     }
 
-   
+
     
 } 

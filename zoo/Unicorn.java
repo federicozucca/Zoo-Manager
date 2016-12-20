@@ -6,8 +6,9 @@ package zoo;
 
 public class Unicorn extends MysticalAnimal implements Flyable, Gallopable {
 
-    public Unicorn(String name, int age){
-        super(name,age);
+    public Unicorn(String name, int age, String type){
+        super(name,age,type);
+
     }
 
     public String fly(){

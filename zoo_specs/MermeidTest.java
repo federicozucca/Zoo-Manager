@@ -11,7 +11,7 @@ public class MermeidTest {
 
     @Before
     public void before(){
-        mermeid = new Mermeid("Ariel",18);
+        mermeid = new Mermeid("Ariel",18,"mermeid");
     }
 
     @Test
