@@ -76,3 +76,4 @@ public class UnicornTest {
         assertEquals(1, unicorn.foodCount());
     }
 }
+
