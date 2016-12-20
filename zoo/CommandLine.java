@@ -4,22 +4,24 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Player {
+public class CommandLine {
   private Zoo zoo;
 
-  public Player(Zoo zoo) {
+  public CommandLine(Zoo zoo) {
     this.zoo = zoo;
     zoo.populateEnclosures();
     zoo.populateAnimals();
   }
 
   public void index(){
+    System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
     System.out.println(" What would you like to do? Write 'add' to add an animal, 'rmv' to remove an animal, 'income' to see the zoo's income, 'ShowAnim' to see all the Zoo's Animals, 'ShowEnc' to see all the Zoo's Enclosures");
     String input = System.console().readLine();
     if ("add".equals(input)){addMysticalAnimal();}
     if ("rmv".equals(input)){removeMysticalAnimal();}
     if ("ShowEnc".equals(input)){showAllEnclosures();}
     if ("ShowAnim".equals(input)){showAllAnimals();}
+    System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
   }
 
     public void showAllEnclosures(){
@@ -53,9 +55,9 @@ public class Player {
     String number = System.console().readLine();
     int mermeidAge = Integer.parseInt(number);
     Mermeid mermeid = new Mermeid(mermeidName,mermeidAge);
-    PoolEnclosure enclosure = (PoolEnclosure)zoo.getEnclosureName("Mermeid Pool");
-    enclosure.addAnimal(mermeid);
-
+    zoo.addAnimaltoMysticalAnimals(mermeid);
+    zoo.addAnimalToEnclosures("Mermeid Pool", mermeid);
+  
 
     index();
   }

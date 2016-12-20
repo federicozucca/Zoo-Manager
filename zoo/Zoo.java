@@ -15,8 +15,8 @@ public class Zoo {
 
     public Zoo(String name) {
         this.name = name;
-        enclosures = new ArrayList<Enclosure>();
-        mysticalAnimals = new ArrayList<MysticalAnimal>();
+        this.enclosures = new ArrayList<Enclosure>();
+        this.mysticalAnimals = new ArrayList<MysticalAnimal>();
     }
 
     public String getName(){
@@ -53,12 +53,23 @@ public class Zoo {
 
     public Enclosure getEnclosureName(String name){
         for( Enclosure enclosure : enclosures){
-            if (enclosure.getName() == "name"){
+            if (enclosure.getName() == name){
                 return enclosure;
             }
 
         }
         return null;
     }
+
+public void addAnimaltoMysticalAnimals(MysticalAnimal animal){
+    mysticalAnimals.add(animal);
+}
+
+public void addAnimalToEnclosures(String name, Mermeid mermeid){
+    PoolEnclosure enclosure = (PoolEnclosure)getEnclosureName(name);
+    enclosure.addAnimal(mermeid);
+    }
+
+
 
 }

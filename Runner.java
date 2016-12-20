@@ -7,9 +7,17 @@ public class Runner {
     String zooName = System.console().readLine();
     Zoo zoo = new Zoo(zooName);
     System.out.println("Welcome to: " + zoo.getName());
-    Player player = new Player(zoo);
+    CommandLine commandLine = new CommandLine(zoo);
 
-    player.run();
+    // Dragon dragon = new Dragon("Camroth Protector Of The Forest", 10);
+    // Mermeid mermeid = new Mermeid("Ariel",18);
+    // Unicorn unicorn = new Unicorn("Ralph",10);
+    // PoolEnclosure poolEnclosure= new PoolEnclosure("Mermeid Pool");
+    // DragonFenceEnclosure dragonFenceEnclosure = new DragonFenceEnclosure("Dragon Fence");
+    // UnicornFenceEnclosure unicornFenceEnclosure = new UnicornFenceEnclosure("Unicorn Fence");
+    // Lake lake = new Lake("Lake");
+
+    commandLine.run();
 
   }
 }

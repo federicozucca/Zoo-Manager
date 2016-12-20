@@ -26,7 +26,7 @@ public class DragonFenceEnclosureTest {
     public void mermeidCanBeRemovedFromTheUnicornFenceTest(){
         Dragon dragon = new Dragon("Ada", 10);
         dragonFenceEnclosure.addAnimal(dragon);
-        dragonFenceEnclosure.remove(mermeid)
+        dragonFenceEnclosure.removeAnimal(dragon);
         assertEquals(1,dragonFenceEnclosure.getSize());
     }
 

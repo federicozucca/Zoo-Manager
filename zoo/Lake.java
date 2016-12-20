@@ -20,7 +20,7 @@ ArrayList<LochNess> mysticalAnimals;
 
 
   public void removeAnimal(LochNess lochness){
-      animals.remove(lochness);
+      mysticalAnimals.remove(lochness);
   }
 
   

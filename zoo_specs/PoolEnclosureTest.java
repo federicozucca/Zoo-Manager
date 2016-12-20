@@ -26,7 +26,7 @@ public class PoolEnclosureTest {
         Mermeid mermeid = new Mermeid("Ariel", 10);
         poolEnclosure.addAnimal(mermeid);
         poolEnclosure.addAnimal(mermeid);
-        poolEnclosure.remove(mermeid);
+        poolEnclosure.removeAnimal(mermeid);
         assertEquals(1,poolEnclosure.getSize());
     }
 }
