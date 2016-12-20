@@ -15,8 +15,13 @@ public class CommandLine {
 
   public void index(){
     System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-    System.out.println(" What would you like to do? Write 'add' to add an animal, 'ShowAnim' to see all the Zoo's Animals, 'ShowEnc' to see all the Zoo's Enclosures");
+    System.out.println(" What would you like to do? Write:\n'add' to add an animal, \n'ShowAnim' to see all the Zoo's Animals, \n'ShowEnc' to see all the Zoo's Enclosures");
+
     String input = System.console().readLine();
+    // switch (input) {
+    //   case "add":
+    //   addMysticalAnimal();
+
     if ("add".equals(input)){addMysticalAnimal();}
     if ("ShowEnc".equals(input)){showAllEnclosures();}
     if ("ShowAnim".equals(input)){showAllAnimals();}

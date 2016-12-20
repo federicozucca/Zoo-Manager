@@ -39,7 +39,7 @@ public class Zoo {
 
     public void printAllAnimals() {
         for (MysticalAnimal mysticalAnimal : mysticalAnimals)
-            System.out.println(mysticalAnimal.getName() + " Age: " +mysticalAnimal.getAge() + " Status: " + mysticalAnimal.getEnergy() );
+            System.out.println(mysticalAnimal.getName() + "\nAge: " +mysticalAnimal.getAge() + "\nStatus: " + mysticalAnimal.getEnergy() + "\n-_-_-_-_-_-_-_-_-_-_-_-_" );
     }
 
 
