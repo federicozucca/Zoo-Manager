@@ -110,7 +110,7 @@ public void addDragon(){
 
   public void addAdultVisitor(){
     visitors.addAdultVisitors();
-    System.out.println("Visitor Added, at the moment you have a total of "+ visitors.getNumberOfAdultVisitors() + " adults visitors in the Park.");
+    System.out.println("Visitor Added, at the moment you have "+ visitors.getNumberOfAdultVisitors() + " Adult visitors and a total of " + visitors.getTotalNumberOfVisitors() + " visitors in the Park.");
 
 
     index();
