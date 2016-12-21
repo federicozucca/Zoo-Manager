@@ -54,17 +54,6 @@ public class DragonTest {
     }
 
     @Test
-    public void canSpendEnergy(){
-        Food food1 = new Food("salmon");
-        Food food2 = new Food("mouse");
-        dragon.eat(food1);
-        dragon.eat(food2);
-        assertEquals(2, dragon.foodCount());
-        dragon.spendEnergy();
-        assertEquals(1 ,dragon.foodCount());
-    }
-
-    @Test
     public void canGetEnergy(){
         Food food1 = new Food("salmon");
         Food food2 = new Food("mouse");
