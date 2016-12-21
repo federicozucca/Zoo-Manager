@@ -51,4 +51,12 @@ public class VisitorsTest {
     assertEquals(120,visitors.dayliOutcome());
     }
 
+    @Test 
+    public void asProfit(){
+        visitors.addAdultVisitors();
+        visitors.incomeSellingTickets();
+        visitors.dayliOutcome();
+    assertEquals(-110,visitors.profit());
+    }
+
 }
