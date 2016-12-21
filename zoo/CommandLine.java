@@ -21,9 +21,9 @@ public class CommandLine {
     switch (input) {
       case"i":
       addMysticalAnimal();
-      case"a":
-      showAllEnclosures();
       case"e":
+      showAllEnclosures();
+      case"a":
       showAllAnimals();
       case"f":
       feedAnimal();
