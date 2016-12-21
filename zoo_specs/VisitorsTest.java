@@ -25,4 +25,11 @@ public class VisitorsTest {
     assertEquals(1,visitors.getNumberOfVisitors());
     }
 
+    @Test
+    public void visitorsCanBuyTickets(){
+        visitors.addVisitors();
+        visitors.incomeSellingTickets();
+    assertEquals(10,visitors.incomeSellingTickets());
+    }
+
 }

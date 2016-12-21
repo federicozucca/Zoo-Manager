@@ -10,13 +10,15 @@ public class Visitors {
 
     private int numberOfVisitors;
     private int ticketsPrice;
+    private int income;
 
 
 
 
     public Visitors() {
-        this.numberOfVisitors = 0;
-        this.ticketsPrice = 10;
+        this.numberOfVisitors = numberOfVisitors;
+        this.ticketsPrice = ticketsPrice;
+        this.income = income;
     }
 
     public int getNumberOfVisitors(){
@@ -25,6 +27,12 @@ public class Visitors {
 
     public int addVisitors(){
         return this.numberOfVisitors ++;
+    }
+
+    public int incomeSellingTickets(){
+        ticketsPrice=10;
+        income = numberOfVisitors*ticketsPrice;
+        return income;
     }
 
 }
