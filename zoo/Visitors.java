@@ -12,6 +12,7 @@ public class Visitors {
     private int numberOfDiscountVisitors;
     private int ticketsPrice;
     private int income;
+    private int outcome;
 
 
 
@@ -21,6 +22,7 @@ public class Visitors {
         this.numberOfDiscountVisitors = numberOfAdultVisitors;
         this.ticketsPrice = ticketsPrice;
         this.income = income;
+        this.outcome = outcome;
     }
 
     public int getNumberOfAdultVisitors(){
@@ -58,13 +60,13 @@ public class Visitors {
         int cleanEnclosures=10;
         int cleanPublicAreas=5;
         int employers=100;
-        int outcome = feedAnimals+cleanEnclosures+cleanPublicAreas+employers;
+        outcome = feedAnimals+cleanEnclosures+cleanPublicAreas+employers;
         return outcome;
     }
 
     public int profit(){
         int profit = income - outcome;
-        return outcome;
+        return profit;
     }
 
 
