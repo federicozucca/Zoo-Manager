@@ -32,21 +32,14 @@ public class ZooTest {
     public void canRemoveAnAnimal(){
     Mermeid mermeid = new Mermeid("Ariel",19, "mermeid");
     Mermeid mermeid1 = new Mermeid("Ariel",19, "mermeid");
+    Unicorn olo = new Unicorn("Hulk",19, "unicorn");
     zoo.addAnimaltoMysticalAnimals(mermeid);
     zoo.addAnimaltoMysticalAnimals(mermeid1);
-    zoo.removeAnimalFromMysticalAnimals(mermeid1);
-    assertEquals(1, zoo.animalsTotalNumber());
+    zoo.addAnimaltoMysticalAnimals(olo);
+    zoo.removeAnimalFromMysticalAnimals(olo);
+    assertEquals(2, zoo.animalsTotalNumber());
     }
 
-    // @Test
-    // public void getEnclosureByName(){
-    // UnicornFenceEnclosure unicornFenceEnclosure = new UnicornFenceEnclosure("unicorn");
-    // zoo.addEnclosureToZoo(unicornFenceEnclosure);
-    // PoolEnclosure poolEnclosure = new PoolEnclosure("Mermeid Pool");
-    // zoo.addEnclosureToZoo(poolEnclosure);
-    // zoo.getEnclosureName("Mermeid Pool");
-    // assertEquals(poolEnclosure, zoo.getEnclosureName());
-    // }
 
     @Test
     public void canAddAnEnclosure(){

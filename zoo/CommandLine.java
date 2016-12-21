@@ -22,6 +22,10 @@ public class CommandLine {
       case"i":
       addMysticalAnimal();
       index();
+      case"r":
+      showAllAnimals();
+      removeMysticalAnimal();
+      index();
       case"e":
       showAllEnclosures();
       index();
@@ -122,6 +126,10 @@ public void addDragon(){
 
   public void showIncome() {
     System.out.println("At the moment you have a total of "+ visitors.getTotalNumberOfVisitors() + " visitors in the Park ("+ visitors.getNumberOfAdultVisitors() +" Adults tickets and " + visitors.getNumberOfDiscountVisitors() + " Discount tickets ). The amount of the tickets's income is of: " + visitors.incomeSellingTickets()+ ".00 £. The outcome is: " + visitors.dailyOutcome() +"£. The DAILY PROFIT is:" + visitors.profit() +"£." );
+  }
+
+  public void removeMysticalAnimal(){
+    zoo.removeAnimal();
   }
 
   public void exit(){
