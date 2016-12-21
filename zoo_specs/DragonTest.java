@@ -61,7 +61,7 @@ public class DragonTest {
         dragon.eat(food2);
         assertEquals(2, dragon.foodCount());
         dragon.getEnergy();
-        assertEquals("I am getting tired, I need to eat" ,dragon.getEnergy());
+        assertEquals("I feel good" ,dragon.getEnergy());
     }
 
     @Test

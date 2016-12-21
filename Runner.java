@@ -6,8 +6,9 @@ public class Runner {
     System.out.println("Enter zoo name: ");
     String zooName = System.console().readLine();
     Zoo zoo = new Zoo(zooName);
+    Visitors visitors = new Visitors();
     System.out.println("Welcome to: " + zoo.getName());
-    CommandLine commandLine = new CommandLine(zoo);
+    CommandLine commandLine = new CommandLine(zoo, visitors);
 
     PoolEnclosure poolEnclosure= new PoolEnclosure("Mermeid Pool");
     zoo.enclosures.add(poolEnclosure);

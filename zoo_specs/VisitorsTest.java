@@ -16,20 +16,32 @@ public class VisitorsTest {
 
     @Test
     public void numberOfVisitorsStartEmpty(){
-    assertEquals(0,visitors.getNumberOfVisitors());
+    assertEquals(0,visitors.getTotalNumberOfVisitors());
     }
 
     @Test
-    public void numberOfVisitorsCanIncrease(){
-        visitors.addVisitors();
-    assertEquals(1,visitors.getNumberOfVisitors());
+    public void numberOfAdultVisitorsCanIncrease(){
+        visitors.addAdultVisitors();
+    assertEquals(1,visitors.getTotalNumberOfVisitors());
+    assertEquals(1,visitors.getNumberOfAdultVisitors());
+    assertEquals(0,visitors.getNumberOfDiscountVisitors());
+    }
+
+    @Test
+    public void numberOfDiscountVisitorsCanIncrease(){
+        visitors.addDiscountVisitors();
+    assertEquals(1,visitors.getTotalNumberOfVisitors());
+    assertEquals(0,visitors.getNumberOfAdultVisitors());
+    assertEquals(1,visitors.getNumberOfDiscountVisitors());
+
     }
 
     @Test
     public void visitorsCanBuyTickets(){
-        visitors.addVisitors();
+        visitors.addAdultVisitors();
+        visitors.addDiscountVisitors();
         visitors.incomeSellingTickets();
-    assertEquals(10,visitors.incomeSellingTickets());
+    assertEquals(15,visitors.incomeSellingTickets());
     }
 
 }

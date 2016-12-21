@@ -54,17 +54,17 @@ public abstract class MysticalAnimal {
         }
 
     public String getEnergy(){
-        if(foodCount() >= 10) {
+        if(foodCount() > 2) {
             return "I am full of energy!";}
-            else if(foodCount()<10 &&foodCount()>=5){
+            else if(foodCount()==2){
             return "I feel good";
         }
-        else if(foodCount()<5 &&foodCount()>0){
+        else if(foodCount()==1){
             return "I am getting tired, I need to eat";
         }
 
         else if(foodCount()==0){
-            return "I don't feel weel. I am without energy. Please feed me.";
+            return "I don't feel well. I am without energy. Please feed me.";
         }
         return null;
     }

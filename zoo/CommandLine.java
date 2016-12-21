@@ -6,14 +6,16 @@ import java.util.Scanner;
 
 public class CommandLine {
   private Zoo zoo;
+  private Visitors visitors;
 
-  public CommandLine(Zoo zoo) {
+  public CommandLine(Zoo zoo, Visitors visitors) {
     this.zoo = zoo;
+    this.visitors = visitors;
   }
 
   public String index(){
     System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-    System.out.println(" What would you like to do? Write:\n'i' to add an animal, \n'a' to see all the Zoo's Animals, \n'e' to see all the Zoo's Enclosures, \n 'f' to feed all the animals");
+    System.out.println(" What would you like to do? Write:\n'i' to add an animal,\n'a' to see all the Zoo's Animals,\n'e' to see all the Zoo's Enclosures,\n 'f' to feed all the animals,\n 'v' to add an Adult visitor,\n'd' to add a visitor with a discount (Students or Under 16),\n 'p' to see the Income");
 
     String input = System.console().readLine();
     switch (input) {
@@ -25,6 +27,12 @@ public class CommandLine {
       showAllAnimals();
       case"f":
       feedAnimal();
+      case"v":
+      addAdultVisitor();
+      case"d":
+      addDiscountVisitor();
+      case"p":
+      showIncome();
       System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
     }
     return "Error";    
@@ -100,8 +108,26 @@ public void addDragon(){
   index();
   }
 
+  public void addAdultVisitor(){
+    visitors.addAdultVisitors();
+    System.out.println("Visitor Added, at the moment you have a total of "+ visitors.getNumberOfAdultVisitors() + " adults visitors in the Park.");
 
 
+    index();
+  }
+
+  public void addDiscountVisitor(){
+    visitors.addDiscountVisitors();
+    System.out.println("Visitor Added, at the moment you have "+ visitors.getNumberOfDiscountVisitors() + " visitors with a discount and a total of " + visitors.getTotalNumberOfVisitors() + " visitors in the Park.");
+
+
+    index();
+  }
+
+  public void showIncome() {
+    System.out.println("At the moment you have a total of "+ visitors.getTotalNumberOfVisitors() + " visitors in the Park ("+ visitors.getNumberOfAdultVisitors() +" Adults tickets and " + visitors.getNumberOfDiscountVisitors() + " Discount tickets ). The amount of the tickets's income is of: " + visitors.incomeSellingTickets()+ ".00 £" );
+  index();
+  }
 
 
   public void run(){

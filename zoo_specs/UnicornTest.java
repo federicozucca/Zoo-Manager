@@ -61,7 +61,7 @@ public class UnicornTest {
     public void canGetEnergy(){
         assertEquals(0,unicorn.foodCount());
         unicorn.getEnergy();
-        assertEquals("I don't feel weel. I am without energy. Please feed me." ,unicorn.getEnergy());
+        assertEquals("I don't feel well. I am without energy. Please feed me." ,unicorn.getEnergy());
     }
 
     @Test
