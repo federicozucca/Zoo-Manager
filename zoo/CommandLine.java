@@ -125,7 +125,7 @@ public void addDragon(){
   }
 
   public void showIncome() {
-    System.out.println("At the moment you have a total of "+ visitors.getTotalNumberOfVisitors() + " visitors in the Park ("+ visitors.getNumberOfAdultVisitors() +" Adults tickets and " + visitors.getNumberOfDiscountVisitors() + " Discount tickets ). The amount of the tickets's income is of: " + visitors.incomeSellingTickets()+ ".00 £" );
+    System.out.println("At the moment you have a total of "+ visitors.getTotalNumberOfVisitors() + " visitors in the Park ("+ visitors.getNumberOfAdultVisitors() +" Adults tickets and " + visitors.getNumberOfDiscountVisitors() + " Discount tickets ). The amount of the tickets's income is of: " + visitors.incomeSellingTickets()+ ".00 £. The outcome is: " + visitors.dayliOutcome() +"£. The PROFIT is:" + visitors.profit() +"£." );
   index();
   }
 
