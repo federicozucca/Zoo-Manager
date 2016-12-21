@@ -67,10 +67,6 @@ public class Visitors {
         return outcome;
     }
 
-    public int profit(){
-        return this.numberOfDiscountVisitors ++;
-    }
-
 
 
 }
