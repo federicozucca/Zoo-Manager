@@ -15,7 +15,7 @@ public class CommandLine {
 
   public String index(){
     System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-    System.out.println(" What would you like to do?\n'i' to add an animal,\n'a' to see all the Zoo's Animals,\n'e' to see all the Zoo's Enclosures,\n'f' to feed all the animals,\n'v' to add an Adult visitor,\n'd' to add a visitor with a discount (Students or Under 16),\n'p' to see the Income");
+    System.out.println(" What would you like to do?\n'i' to add an animal,\n'a' to see all the Zoo's Animals,\n'e' to see all the Zoo's Enclosures,\n'f' to feed all the animals,\n'v' to add an Adult visitor,\n'd' to add a visitor with a discount (Students or Under 16),\n'p' to see the Income,Outcome and profit,\n'exit' to leave the zoo");
 
     String input = System.console().readLine();
     switch (input) {
@@ -33,6 +33,8 @@ public class CommandLine {
       addDiscountVisitor();
       case"p":
       showIncome();
+      case"exit":
+      exit();
       System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
     }
     return "Error";    
@@ -125,8 +127,14 @@ public void addDragon(){
   }
 
   public void showIncome() {
-    System.out.println("At the moment you have a total of "+ visitors.getTotalNumberOfVisitors() + " visitors in the Park ("+ visitors.getNumberOfAdultVisitors() +" Adults tickets and " + visitors.getNumberOfDiscountVisitors() + " Discount tickets ). The amount of the tickets's income is of: " + visitors.incomeSellingTickets()+ ".00 £. The outcome is: " + visitors.dayliOutcome() +"£. The PROFIT is:" + visitors.profit() +"£." );
+    System.out.println("At the moment you have a total of "+ visitors.getTotalNumberOfVisitors() + " visitors in the Park ("+ visitors.getNumberOfAdultVisitors() +" Adults tickets and " + visitors.getNumberOfDiscountVisitors() + " Discount tickets ). The amount of the tickets's income is of: " + visitors.incomeSellingTickets()+ ".00 £. The outcome is: " + visitors.dayliOutcome() +"£. The DAYLI PROFIT is:" + visitors.profit() +"£." );
   index();
+  }
+
+  public void exit(){
+    System.out.println("Thank you for visiting us. Would you like to leave a feedback about "+zoo.getName()+"?");
+    String feedback = System.console().readLine();
+    System.out.println("Your feedback has been accepted. See you soon.");
   }
 
 
