@@ -15,7 +15,7 @@ public class CommandLine {
 
   public String index(){
     System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-    System.out.println(" What would you like to do? Write:\n'i' to add an animal,\n'a' to see all the Zoo's Animals,\n'e' to see all the Zoo's Enclosures,\n 'f' to feed all the animals,\n 'v' to add an Adult visitor,\n'd' to add a visitor with a discount (Students or Under 16),\n 'p' to see the Income");
+    System.out.println(" What would you like to do?\n'i' to add an animal,\n'a' to see all the Zoo's Animals,\n'e' to see all the Zoo's Enclosures,\n'f' to feed all the animals,\n'v' to add an Adult visitor,\n'd' to add a visitor with a discount (Students or Under 16),\n'p' to see the Income");
 
     String input = System.console().readLine();
     switch (input) {

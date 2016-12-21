@@ -44,4 +44,11 @@ public class VisitorsTest {
     assertEquals(15,visitors.incomeSellingTickets());
     }
 
+
+    @Test 
+    public void asDayliOutCome(){
+        visitors.dayliOutcome();
+    assertEquals(120,visitors.dayliOutcome());
+    }
+
 }

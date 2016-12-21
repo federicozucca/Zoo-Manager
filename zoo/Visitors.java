@@ -53,4 +53,24 @@ public class Visitors {
         return income;
     }
 
+    public int dayliOutcome(){
+        int feedAnimals=5;
+        int cleanEnclosures=10;
+        int cleanPublicAreas=5;
+        int employers=100;
+        int outcome = feedAnimals+cleanEnclosures+cleanPublicAreas+employers;
+        return outcome;
+    }
+
+    public int profit(){
+        int profit = income - outcome;
+        return outcome;
+    }
+
+    public int profit(){
+        return this.numberOfDiscountVisitors ++;
+    }
+
+
+
 }
