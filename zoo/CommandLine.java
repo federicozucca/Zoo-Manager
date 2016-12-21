@@ -21,18 +21,26 @@ public class CommandLine {
     switch (input) {
       case"i":
       addMysticalAnimal();
+      index();
       case"e":
       showAllEnclosures();
+      index();
       case"a":
       showAllAnimals();
+      index();
       case"f":
+      showAllAnimals();
       feedAnimal();
+      index();
       case"v":
       addAdultVisitor();
+      index();
       case"d":
       addDiscountVisitor();
+      index();
       case"p":
       showIncome();
+      index();
       case"exit":
       exit();
       System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
@@ -42,12 +50,10 @@ public class CommandLine {
 
     public void showAllEnclosures(){
     zoo.getEnclosuresDetails();
-    index();
   }
 
     public void showAllAnimals(){
     zoo.printAllAnimals();
-    index();
   }
 
   public void addMysticalAnimal() {
@@ -74,8 +80,6 @@ public class CommandLine {
     zoo.addAnimaltoMysticalAnimals(mermeid);
     zoo.addAnimalToEnclosures("Mermeid Pool", mermeid);
     System.out.println("Mermeid "+ mermeidName + "added to: " + zoo.getName());
-
-    index();
   }
   
   public void addUnicorn(){
@@ -88,8 +92,6 @@ public class CommandLine {
     zoo.addAnimaltoMysticalAnimals(unicorn);
     zoo.addAnimalToEnclosures("Unicorn Fence", unicorn);
     System.out.println("Unicorn "+ unicornName + " added to: " + zoo.getName());
-
-    index();
 }
 
 public void addDragon(){
@@ -102,45 +104,36 @@ public void addDragon(){
   zoo.addAnimaltoMysticalAnimals(dragon);
   zoo.addAnimalToEnclosures("Dragon Fence", dragon);
   System.out.println("Dragon "+ dragonName + "added to: " + zoo.getName());
-    index();
   }
 
   public void feedAnimal(){
   zoo.feedAnimal();
-  index();
   }
 
   public void addAdultVisitor(){
     visitors.addAdultVisitors();
     System.out.println("Visitor Added, at the moment you have "+ visitors.getNumberOfAdultVisitors() + " Adult visitors and a total of " + visitors.getTotalNumberOfVisitors() + " visitors in the Park.");
-
-
-    index();
   }
 
   public void addDiscountVisitor(){
     visitors.addDiscountVisitors();
     System.out.println("Visitor Added, at the moment you have "+ visitors.getNumberOfDiscountVisitors() + " visitors with a discount and a total of " + visitors.getTotalNumberOfVisitors() + " visitors in the Park.");
-
-
-    index();
   }
 
   public void showIncome() {
-    System.out.println("At the moment you have a total of "+ visitors.getTotalNumberOfVisitors() + " visitors in the Park ("+ visitors.getNumberOfAdultVisitors() +" Adults tickets and " + visitors.getNumberOfDiscountVisitors() + " Discount tickets ). The amount of the tickets's income is of: " + visitors.incomeSellingTickets()+ ".00 £. The outcome is: " + visitors.dayliOutcome() +"£. The DAYLI PROFIT is:" + visitors.profit() +"£." );
-  index();
+    System.out.println("At the moment you have a total of "+ visitors.getTotalNumberOfVisitors() + " visitors in the Park ("+ visitors.getNumberOfAdultVisitors() +" Adults tickets and " + visitors.getNumberOfDiscountVisitors() + " Discount tickets ). The amount of the tickets's income is of: " + visitors.incomeSellingTickets()+ ".00 £. The outcome is: " + visitors.dailyOutcome() +"£. The DAILY PROFIT is:" + visitors.profit() +"£." );
   }
 
   public void exit(){
-    System.out.println("Thank you for visiting us. Would you like to leave a feedback about "+zoo.getName()+"?");
+    System.out.println("Thank you for visiting us. Would you like to leave a feedback about "+ zoo.getName() +"?");
     String feedback = System.console().readLine();
     System.out.println("Your feedback has been accepted. See you soon.");
+    System.exit(0);
   }
 
 
   public void run(){
     index();
-
   }
 
 }

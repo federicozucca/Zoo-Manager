@@ -48,7 +48,7 @@ public class VisitorsTest {
     @Test 
     public void asDayliOutCome(){
         visitors.dayliOutcome();
-    assertEquals(120,visitors.dayliOutcome());
+    assertEquals(120,visitors.dailyOutcome());
     }
 
     @Test 

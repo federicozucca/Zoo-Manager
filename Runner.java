@@ -28,10 +28,7 @@ public class Runner {
     Unicorn unicorn = new Unicorn("Ralph",10, "Unicorn");
     zoo.mysticalAnimals.add(unicorn);  
     zoo.addAnimalToEnclosures("Unicorn Fence", unicorn);
-
-
     
-
     commandLine.run();
 
   }

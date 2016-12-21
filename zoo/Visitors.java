@@ -55,7 +55,7 @@ public class Visitors {
         return income;
     }
 
-    public int dayliOutcome(){
+    public int dailyOutcome(){
         int feedAnimals=5;
         int cleanEnclosures=10;
         int cleanPublicAreas=5;

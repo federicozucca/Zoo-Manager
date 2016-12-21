@@ -105,12 +105,24 @@ public void getEnclosuresDetails() {
           }
     }
 
+    // public void feedAnimal(){
+    //   Food food = new Food("salmon");
+    //   for (MysticalAnimal mysticalAnimal : mysticalAnimals) {
+    //     mysticalAnimal.eat(food);
+    //     System.out.println(mysticalAnimal.getEnergy());
+    //   }
+    // }
+
     public void feedAnimal(){
-      Food food = new Food("salmon");
-      for (MysticalAnimal mysticalAnimal : mysticalAnimals) {
-        mysticalAnimal.eat(food);
-        System.out.println(mysticalAnimal.getEnergy());
-      }
-    }
+        Food food = new Food("salmon");
+        System.out.println("Which animal would you like to feed?");
+        String input = System.console().readLine();
+            for (MysticalAnimal mysticalAnimal : mysticalAnimals)
+                if (input.equals(mysticalAnimal.getName())){
+                    mysticalAnimal.eat(food);
+                    System.out.println(mysticalAnimal.getEnergy());
+                }
+
+        }
 
 }
