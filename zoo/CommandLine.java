@@ -9,22 +9,22 @@ public class CommandLine {
 
   public CommandLine(Zoo zoo) {
     this.zoo = zoo;
-    // zoo.populateEnclosures();
-    // zoo.populateAnimals();
   }
 
   public String index(){
     System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-    System.out.println(" What would you like to do? Write:\n'add' to add an animal, \n'ShowAnim' to see all the Zoo's Animals, \n'ShowEnc' to see all the Zoo's Enclosures");
+    System.out.println(" What would you like to do? Write:\n'i' to add an animal, \n'a' to see all the Zoo's Animals, \n'e' to see all the Zoo's Enclosures, \n 'f' to feed all the animals");
 
     String input = System.console().readLine();
     switch (input) {
-      case"add":
+      case"i":
       addMysticalAnimal();
-      case"ShowEnc":
+      case"a":
       showAllEnclosures();
-      case"ShowAnim":
+      case"e":
       showAllAnimals();
+      case"f":
+      feedAnimal();
       System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
     }
     return "Error";    
@@ -92,9 +92,17 @@ public void addDragon(){
   zoo.addAnimaltoMysticalAnimals(dragon);
   zoo.addAnimalToEnclosures("Dragon Fence", dragon);
   System.out.println("Dragon "+ dragonName + "added to: " + zoo.getName());
+    index();
+  }
 
+  public void feedAnimal(){
+  zoo.feedAnimal();
   index();
-}
+  }
+
+
+
+
 
   public void run(){
     index();

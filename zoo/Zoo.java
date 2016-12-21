@@ -105,5 +105,12 @@ public void getEnclosuresDetails() {
           }
     }
 
+    public void feedAnimal(){
+      Food food = new Food("salmon");
+      for (MysticalAnimal mysticalAnimal : mysticalAnimals) {
+        mysticalAnimal.eat(food);
+        System.out.println(mysticalAnimal.getEnergy());
+      }
+    }
 
 }
